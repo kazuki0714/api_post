@@ -1,0 +1,20 @@
+<h1>お問い合わせ</h1>
+
+<!-- app/views/users/new.html.erb -->
+
+<%= form_tag("/users/create",{multipart: true}) do %>
+
+<p>送信先</p>
+<input name="dest">
+
+<p>タイトル</p>
+<input name="subject">
+
+<p>問い合わせ内容</p>
+<input name="body">
+
+<p>添付ファイル</p>
+<input name="attachments" type="file">
+<p><input type="submit" value="登録"></p>
+
+<% end %>
