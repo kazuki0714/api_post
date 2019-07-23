@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
     if @user.save
       attachments = user_params[:attachments] # 添付ファイルの情報を代入
-      post = {} # postメソッド作成
+      post = {} # ファイルの名前と種類を取得する
       if params[:attachments]
         post[:attachments] = attachments.read # ファイルを読み込んでアップロード
         post[:attachments_type] = attachments.content_type # xlsxファイルを読み込んでアップロード
